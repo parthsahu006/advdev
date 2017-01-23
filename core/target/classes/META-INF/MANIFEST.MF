@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1485159319736
+Build-Jdk: 1.7.0_80
+Built-By: 24340
+Bundle-Description: Core bundle for itc hotel development
+Bundle-ManifestVersion: 2
+Bundle-Name: itc hotel development - Core
+Bundle-SymbolicName: com.hotel.advdevelop.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.hotel.core.development;version="1.0.0";uses:="javax.
+ servlet",com.hotel.core.filters;version="1.0.0";uses:="javax.servlet",c
+ om.hotel.core.listeners;version="1.0.0";uses:="org.osgi.service.event",
+ com.hotel.core.models;version="1.0.0";uses:="javax.annotation,javax.inj
+ ect,org.apache.sling.api.resource,org.apache.sling.models.annotations",
+ com.hotel.core;version="1.0",com.hotel.core.schedulers;version="1.0.0",
+ com.hotel.core.servlets;version="1.0.0";uses:="javax.servlet,org.apache
+ .sling.api,org.apache.sling.api.servlets"
+Import-Package: javax.inject;version="0.0.0",org.apache.sling.models.ann
+ otations;version="[1.1,2)",javax.annotation,javax.servlet,org.apache.sl
+ ing.api;version="[2.3,3)",org.apache.sling.api.request;version="[2.4,3)
+ ",org.apache.sling.api.resource;version="[2.5,3)",org.apache.sling.api.
+ servlets;version="[2.1,3)",org.apache.sling.commons.osgi;version="[2.2,
+ 3)",org.apache.sling.settings;version="[1.3,2)",org.osgi.service.event;
+ version="[1.2,2)",org.slf4j;version="[1.5,2)",com.day.cq.workflow.exec;
+ version="[1.0,2)",org.apache.sling.event.jobs;version="[1.5,2]",com.day
+ .cq.commons.jcr;version="[5.7.0,7.0.0)",com.day.cq.workflow;version="[1
+ .0,2)",com.day.cq.workflow.metadata;version="[1.0,2)",com.day.cq.replic
+ ation;version="[6.0.0,7)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Sling-Model-Packages: com.hotel.core
+Tool: Bnd-2.3.0.201405100607
