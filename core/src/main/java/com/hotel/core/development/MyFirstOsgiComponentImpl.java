@@ -5,7 +5,7 @@ import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Service;
 
 
-@Component(metatype=true,label="Enter the website name:",description = "Simple demo for cron-job like task with properties")
+@Component(label="Enter the website name:",description = "Simple demo for cron-job like task with properties")
 @Service(value=MyFirstOsgiComponent.class)
 
 public class MyFirstOsgiComponentImpl implements MyFirstOsgiComponent {
