@@ -6,16 +6,9 @@ import org.apache.felix.scr.annotations.Service;
 
 
 @Component(metatype=true,label="Enter the website name:",description = "Simple demo for cron-job like task with properties")
-@Service(value = Runnable.class)
+@Service
 @Property(name = "scheduler.expression", value = "*/30 * * * * ?",
 description = "Cron-job expression")
-public class MyFirstOsgiComponent implements Runnable {
-
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		
-		
-	}
+public class MyFirstOsgiComponent {
 
 }
