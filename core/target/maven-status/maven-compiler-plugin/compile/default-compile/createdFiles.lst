@@ -7,3 +7,4 @@ com\hotel\core\schedulers\SimpleScheduledTask.class
 com\hotel\core\development\MyFirstOsgiComponentImpl.class
 com\hotel\core\listeners\SimpleResourceListener.class
 com\hotel\core\models\HelloWorldModel.class
+com\hotel\core\servlets\MyFirstServlet.class

@@ -25,7 +25,7 @@ public class MyFirstServlet extends SlingAllMethodsServlet {
 			SlingHttpServletResponse response) throws ServletException,
 			IOException {
 		
-		response.getWriter().print("poiuyytre2q");
+		response.getWriter().print(service.checkBoxStatus());
 		
 		
 //		super.doGet(request, response);

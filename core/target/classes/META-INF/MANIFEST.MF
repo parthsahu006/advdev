@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1485771587661
-Build-Jdk: 1.7.0_80
+Bnd-LastModified: 1485773984384
+Build-Jdk: 1.8.0_101
 Built-By: 24340
 Bundle-Description: Core bundle for itc hotel development
 Bundle-ManifestVersion: 2
@@ -24,31 +24,31 @@ Import-Package: javax.inject;version="0.0.0",org.apache.sling.models.ann
  servlets;version="[2.1,3)",org.apache.sling.commons.osgi;version="[2.2,
  3)",org.apache.sling.settings;version="[1.3,2)",org.osgi.service.compon
  ent;version="[1.1,2)",org.osgi.service.event;version="[1.2,2)",org.slf4
- j;version="[1.5,2)",com.day.cq.workflow.exec;version="[1.0,2)",com.day.
- cq.commons.jcr;version="[5.7.0,7.0.0)",com.day.cq.workflow.metadata;ver
- sion="[1.0,2)",com.day.cq.replication;version="[6.0.0,7)",org.apache.sl
- ing.event.jobs;version="[1.5,2]",com.day.cq.workflow;version="[1.0,2)"
+ j;version="[1.5,2)",com.day.cq.workflow.metadata;version="[1.0,2)",com.
+ day.cq.commons.jcr;version="[5.7.0,7.0.0)",com.day.cq.workflow;version=
+ "[1.0,2)",com.day.cq.workflow.exec;version="[1.0,2)",com.day.cq.replica
+ tion;version="[6.0.0,7)",org.apache.sling.event.jobs;version="[1.5,2]"
 Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
- rvlet.Filter";service.ranking=-700;sling.filter.scope=REQUEST;sling.fil
- ter.pattern="/content/sunbeantry/(.*)";service.vendor=Adobe,osgi.servic
- e;effective:=active;objectClass="javax.servlet.Servlet";service.vendor=
- Adobe,osgi.service;effective:=active;objectClass="javax.servlet.Filter"
- ;service.ranking=-700;sling.filter.scope=REQUEST;service.vendor=Adobe,o
- sgi.service;effective:=active;objectClass="org.osgi.service.event.Event
- Handler";event.topics="org/apache/sling/api/resource/Resource/*";servic
- e.vendor=Adobe,osgi.service;effective:=active;objectClass="com.hotel.co
- re.development.MyFirstOsgiComponent";osgi.property=false;service.vendor
- =Adobe,osgi.service;effective:=active;objectClass="java.lang.Runnable";
- scheduler.expression="*/30 * * * * ?";scheduler.concurrent=false;servic
+ rvlet.Servlet";service.vendor=Adobe,osgi.service;effective:=active;obje
+ ctClass="javax.servlet.Filter";service.ranking=-700;sling.filter.scope=
+ REQUEST;sling.filter.pattern="/content/sunbeantry/(.*)";service.vendor=
+ Adobe,osgi.service;effective:=active;objectClass="java.lang.Runnable";s
+ cheduler.expression="*/30 * * * * ?";scheduler.concurrent=false;service
+ .vendor=Adobe,osgi.service;effective:=active;objectClass="javax.servlet
+ .Filter";service.ranking=-700;sling.filter.scope=REQUEST;service.vendor
+ =Adobe,osgi.service;effective:=active;objectClass="org.osgi.service.eve
+ nt.EventHandler";event.topics="org/apache/sling/api/resource/Resource/*
+ ";service.vendor=Adobe,osgi.service;effective:=active;objectClass="com.
+ hotel.core.development.MyFirstOsgiComponent";osgi.property=false;servic
  e.vendor=Adobe
 Require-Capability: osgi.service;effective:=active;filter:="(objectClass
  =com.hotel.core.development.MyFirstOsgiComponent)",osgi.ee;filter:="(&(
  osgi.ee=JavaSE)(version=1.6))"
-Service-Component: OSGI-INF/com.hotel.core.filters.LoggingFilter.xml,OSG
- I-INF/com.hotel.core.servlets.SimpleServlet.xml,OSGI-INF/com.hotel.core
- .servlets.MyFirstServlet.xml,OSGI-INF/com.hotel.core.schedulers.SimpleS
- cheduledTask.xml,OSGI-INF/com.hotel.core.development.MyFilter.xml,OSGI-
- INF/com.hotel.core.development.MyFirstOsgiComponentImpl.xml,OSGI-INF/co
- m.hotel.core.listeners.SimpleResourceListener.xml
+Service-Component: OSGI-INF/com.hotel.core.servlets.MyFirstServlet.xml,O
+ SGI-INF/com.hotel.core.development.MyFirstOsgiComponentImpl.xml,OSGI-IN
+ F/com.hotel.core.listeners.SimpleResourceListener.xml,OSGI-INF/com.hote
+ l.core.servlets.SimpleServlet.xml,OSGI-INF/com.hotel.core.filters.Loggi
+ ngFilter.xml,OSGI-INF/com.hotel.core.development.MyFilter.xml,OSGI-INF/
+ com.hotel.core.schedulers.SimpleScheduledTask.xml
 Sling-Model-Packages: com.hotel.core
 Tool: Bnd-2.3.0.201405100607
