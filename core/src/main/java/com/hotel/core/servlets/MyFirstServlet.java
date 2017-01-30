@@ -29,7 +29,7 @@ public class MyFirstServlet extends SlingAllMethodsServlet {
 		response.getWriter().print(service.checkBoxStatus());
 		
 		
-		/*super.doGet(request, response);*/
+//		super.doGet(request, response);
 	}
 	
 	
