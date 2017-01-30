@@ -11,7 +11,7 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import com.hotel.core.development.MyFirstOsgiComponent;
 
-@SlingServlet(paths="call/myservlet",methods="GET")
+@SlingServlet(paths="/call/myservlet",methods="GET")
 public class MyFirstServlet extends SlingAllMethodsServlet {
 
 	/**
