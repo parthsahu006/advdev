@@ -8,12 +8,11 @@ import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
-
+import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import com.hotel.core.development.MyFirstOsgiComponent;
 
-@SlingServlet(paths="call/myservlet",methods={"get","post"})
-public class MyFirstServlet extends SlingSafeMethodsServlet {
+@SlingServlet(paths="call/myservlet",methods="GET")
+public class MyFirstServlet extends SlingAllMethodsServlet {
 
 	/**
 	 * 
