@@ -23,7 +23,10 @@ public class MyFirstOsgiComponentImpl implements MyFirstOsgiComponent {
 		}
 		return "the checkbox is not checked!!";
 	}
-	
+	public String meth() {
+		
+		return ((NonOsgiService) context.getBundleContext().getService(context.getServiceReference())).show();
+	}
 	@Activate
 	public void activatemethod(ComponentContext context1)
 	{
