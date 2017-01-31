@@ -8,19 +8,17 @@ import org.osgi.service.component.ComponentContext;
 
 @Component(metatype=true,label="MyFirstOsgiComponent",description = "Simple demo for cron-job like task with properties")
 @Service(value=MyFirstOsgiComponent.class)
-@Properties({ 
-		@Property(label="tick yes or no:",name="osgi.property", boolValue=false,
-			description = "Whether or not to schedule this task concurrently"),
-		@Property(label = "Author Gender",description = "Describe Author Gender",
-			options={@PropertyOption(name="Male",value="1. Male"),@PropertyOption(name="Female",value="2. Female")},value="Male")
-})
+@Property(label="tick yes or no:",name="osgi.property", boolValue=false,
+			description = "Whether or not to schedule this task concurrently")
  
 
 
 public class MyFirstOsgiComponentImpl implements MyFirstOsgiComponent {
 
+	@Property(label = "Author Gender",description = "Describe Author Gender",
+			options={@PropertyOption(name="Male",value="1. Male"),@PropertyOption(name="Female",value="2. Female")},value="Male")
+	private static final String AUTHOR_GENDER = "author.gender";
 
-	
 	NonOsgiService nonOsgiService;
 	
 	ComponentContext context;
