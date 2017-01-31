@@ -1,7 +1,8 @@
 package com.hotel.core.development;
 
-import org.apache.felix.scr.annotations.Reference;
+import org.osgi.framework.ServiceReference;
 import org.osgi.service.component.ComponentContext;
+
 
 public class NonOsgiServiceImpl implements NonOsgiService {
 
@@ -11,5 +12,10 @@ public class NonOsgiServiceImpl implements NonOsgiService {
 		return "hello";
 		
 	}
-
+	
+	@Override
+	public ServiceReference referenceReturning(ComponentContext context1) {
+		return context1.getServiceReference();
+		
+	}
 }

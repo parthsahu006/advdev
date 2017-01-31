@@ -1,9 +1,10 @@
 package com.hotel.core.development;
 
+
+
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.osgi.service.component.ComponentContext;
 
@@ -14,7 +15,9 @@ import org.osgi.service.component.ComponentContext;
 description = "Whether or not to schedule this task concurrently")
 public class MyFirstOsgiComponentImpl implements MyFirstOsgiComponent {
 
-	NonOsgiService nonOsgiService=new NonOsgiServiceImpl();
+
+	
+	NonOsgiService nonOsgiService;
 	
 	ComponentContext context;
 	
@@ -28,7 +31,8 @@ public class MyFirstOsgiComponentImpl implements MyFirstOsgiComponent {
 	}
 	public String meth() {
 		
-		return nonOsgiService.show();
+		return ( (NonOsgiService) context.getBundleContext().getService(new NonOsgiServiceImpl().referenceReturning(context))).show();
+//		return null;
 	}
 	
 	

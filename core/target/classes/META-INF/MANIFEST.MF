@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1485778205377
+Bnd-LastModified: 1485843410491
 Build-Jdk: 1.8.0_101
 Built-By: 24340
 Bundle-Description: Core bundle for itc hotel development
@@ -25,10 +25,10 @@ Import-Package: javax.inject;version="0.0.0",org.apache.sling.models.ann
  3)",org.apache.sling.settings;version="[1.3,2)",org.osgi.framework;vers
  ion="[1.5,2)",org.osgi.service.component;version="[1.1,2)",org.osgi.ser
  vice.event;version="[1.2,2)",org.slf4j;version="[1.5,2)",com.day.cq.wor
- kflow.metadata;version="[1.0,2)",org.apache.sling.event.jobs;version="[
- 1.5,2]",com.day.cq.replication;version="[6.0.0,7)",com.day.cq.commons.j
- cr;version="[5.7.0,7.0.0)",com.day.cq.workflow;version="[1.0,2)",com.da
- y.cq.workflow.exec;version="[1.0,2)"
+ kflow.exec;version="[1.0,2)",com.day.cq.workflow.metadata;version="[1.0
+ ,2)",com.day.cq.replication;version="[6.0.0,7)",com.day.cq.workflow;ver
+ sion="[1.0,2)",com.day.cq.commons.jcr;version="[5.7.0,7.0.0)",org.apach
+ e.sling.event.jobs;version="[1.5,2]"
 Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
  rvlet.Servlet";service.vendor=Adobe,osgi.service;effective:=active;obje
  ctClass="javax.servlet.Filter";service.ranking=-700;sling.filter.scope=
