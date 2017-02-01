@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Homepage</title>
+<sly data-sly-include="wcm/foundation/components/page/head.html"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Hello</h1>
+<label>You are in ${currentPage.title} page</label>
+<h4>resource path: ${resource.path} </h4>
+<h3>Calling our custom service</h3>
+<input type="button" id="subbtn" value="Call servlet" />
+<p id="result"></p>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#subbtn").click(function() {
+		$.ajax({
+			type:"GET",
+			url:"/call/myservlet",
+// 			data:{
+// 				inpstr  :$("#currency").val()
+// 			},
+//			dataType: "json",
+			success:function(data)
+			{
+				document.getElementById("result").innerHTML = data;
+			}
+		})
+	});
+	});
+
+</script>
+</body>
+</html>
