@@ -13,7 +13,7 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import com.hotel.core.development.MyFirstOsgiComponent;
 
 @SuppressWarnings("serial")
-@SlingServlet(paths = "/call/myservlet", methods = "GET")
+@SlingServlet(paths = "/call.html/myservlet", methods = "GET")
 public class MyFirstServlet extends SlingAllMethodsServlet {
 
 	@Reference
