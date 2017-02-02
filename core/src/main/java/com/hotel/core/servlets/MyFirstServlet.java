@@ -19,12 +19,13 @@ public class MyFirstServlet extends SlingAllMethodsServlet {
 	@Reference
 	MyFirstOsgiComponent service;
 
-	StringBuilder output = new StringBuilder("");
+	StringBuilder output;
 
 	@Override
 	protected void doGet(SlingHttpServletRequest request,
 			SlingHttpServletResponse response) throws ServletException,
 			IOException {
+		output = new StringBuilder("");
 		output.append(service.checkBoxStatus() + "\n"
 				+ service.DropDownStatus() + "\n"
 				+ service.MultifieldStatus() + "\n");
